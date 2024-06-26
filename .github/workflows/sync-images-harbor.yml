@@ -41,5 +41,6 @@ jobs:
         
         echo "源镜像：${{ inputs.images_src }}"
         echo "目标镜像：${{ inputs.images_dest }}"
+        echo "skopeo copy docker://${{ inputs.images_src }} docker://${{ secrets.HARBOR_REGISTRY }}/${{ inputs.images_dest }}"
         skopeo copy docker://${{ inputs.images_src }} docker://${{ secrets.HARBOR_REGISTRY }}/${{ inputs.images_dest }}
  
