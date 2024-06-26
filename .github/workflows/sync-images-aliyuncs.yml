@@ -35,7 +35,7 @@ jobs:
         #!/usr/bin/env bash
         str="${{ inputs.images_src }}"
         # 替换字符串中的 / 为 __
-        new_images="${str//\//__}"
+        new_images="${str//\//_}"
         echo "$new_images"
         
         echo "源镜像：${{ inputs.images_src }}"
